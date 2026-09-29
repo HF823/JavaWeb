@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="JDBC" />
+        <module name="deepseek_Learn" />
+        <module name="springbootdemo" />
+        <module name="springboot-web-quickstart" />
+      </profile>
+      <profile name="Annotation profile for Mybatis" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="D:/Maven/apache-maven-3.9.4/mvn_repo/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
+        </processorPath>
+        <module name="springboot-web-01" />
+        <module name="Mybatis" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="deepseek_Learn" target="25" />
+      <module name="Exception" target="17" />
+      <module name="Json_Data" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Exception" options="-parameters" />
+      <module name="Json_Data" options="-parameters" />
+      <module name="Mybatis" options="-parameters" />
+      <module name="springboot-web-01" options="-parameters" />
+      <module name="springboot-web-quickstart" options="-parameters" />
+      <module name="springbootdemo" options="-parameters" />
+    </option>
+  </component>
+</project>
