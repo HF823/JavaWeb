@@ -1,0 +1,14 @@
+E:\Java\Web\tlias-web-management\src\main\java\com\itheima\controller\DeptController.java
+E:\Java\Web\tlias-web-management\src\main\java\com\itheima\controller\EmpController.java
+E:\Java\Web\tlias-web-management\src\main\java\com\itheima\mapper\DeptMapper.java
+E:\Java\Web\tlias-web-management\src\main\java\com\itheima\mapper\EmpMapper.java
+E:\Java\Web\tlias-web-management\src\main\java\com\itheima\pojo\Dept.java
+E:\Java\Web\tlias-web-management\src\main\java\com\itheima\pojo\Emp.java
+E:\Java\Web\tlias-web-management\src\main\java\com\itheima\pojo\EmpExpr.java
+E:\Java\Web\tlias-web-management\src\main\java\com\itheima\pojo\PageResult.java
+E:\Java\Web\tlias-web-management\src\main\java\com\itheima\pojo\Result.java
+E:\Java\Web\tlias-web-management\src\main\java\com\itheima\service\DeptService.java
+E:\Java\Web\tlias-web-management\src\main\java\com\itheima\service\EmpService.java
+E:\Java\Web\tlias-web-management\src\main\java\com\itheima\service\impl\DeptServiceImpl.java
+E:\Java\Web\tlias-web-management\src\main\java\com\itheima\service\impl\EmpServiceImpl.java
+E:\Java\Web\tlias-web-management\src\main\java\com\itheima\TliasWebManagementApplication.java
