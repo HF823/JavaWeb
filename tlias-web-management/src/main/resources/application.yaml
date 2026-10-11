@@ -7,6 +7,10 @@ spring:
     url: jdbc:mysql://localhost:3306/tlias
     username: root
     password: 08230173Lhf
+  #spring事务管理日志
+  logging:
+    level:
+      org.springframework.jdbc.support.JdbcTransactionManager: debug
 mybatis:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
@@ -15,3 +19,10 @@ mybatis:
 pagehelper:
   reasonable: true
   helper-dialect: mysql
+
+#阿里云OSS
+aliyun:
+  oss:
+    endpoint: https://oss-cn-beijing.aliyuncs.com
+    bucketName: java-aiweb-oss
+    region: cn-beijing
