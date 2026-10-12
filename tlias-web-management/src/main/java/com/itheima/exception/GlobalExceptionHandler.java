@@ -1,4 +1,4 @@
-package com.itheima;
+package com.itheima.exception;
 //全局异常处理器
 import com.itheima.pojo.Result;
 import org.springframework.web.bind.annotation.ExceptionHandler;
