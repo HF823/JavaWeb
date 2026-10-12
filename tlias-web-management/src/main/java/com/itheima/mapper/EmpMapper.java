@@ -4,7 +4,6 @@ import com.itheima.pojo.Emp;
 import com.itheima.pojo.EmpQueryParam;
 import org.apache.ibatis.annotations.*;
 
-import java.time.LocalDate;
 import java.util.List;
 import java.util.Map;
 
@@ -55,7 +54,7 @@ public interface EmpMapper {
      * 统计员工性别信息
      */
     @MapKey("name")
-    List<Map> countEmpGenderData();
+    List<Map<String, Object>> countEmpGenderData();
 
     /**
      * 查询全部员工
