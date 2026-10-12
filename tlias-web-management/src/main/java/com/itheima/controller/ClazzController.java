@@ -10,6 +10,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @RestController
 @RequestMapping("/clazzs")
@@ -38,5 +39,43 @@ public class ClazzController {
     public Result save(@RequestBody Clazz clazz){
         clazzService.save(clazz);
         return Result.success(clazz);
+    }
+
+    /**
+     * 根据id查询班级
+     */
+    @GetMapping("/{id}")
+    public Result getInfo(@PathVariable Integer id){
+        Clazz clazz = clazzService.getInfo(id);
+        return Result.success(clazz);
+    }
+
+    /**
+     * 修改班级信息
+     */
+    @PutMapping
+    public Result update(@RequestBody Clazz clazz){
+        clazzService.update(clazz);
+        return Result.success();
+    }
+
+    /**
+     * 根据id删除班级
+     * @param id
+     * @return
+     */
+    @DeleteMapping("/{id}")
+    public Result delete(@PathVariable Integer id){
+        clazzService.deleteById(id);
+        return Result.success();
+    }
+
+    /**
+     * 查询所有班级
+     */
+    @GetMapping("/list")
+    public Result findAll(){
+        List<Clazz> clazzList = clazzService.findAll();
+        return Result.success(clazzList);
     }
 }
