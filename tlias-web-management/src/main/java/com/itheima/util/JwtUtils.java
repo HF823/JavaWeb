@@ -3,38 +3,37 @@ package com.itheima.util;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
-
 import java.util.Date;
 import java.util.Map;
 
 public class JwtUtils {
 
-    private static String signKey = "SVRIRUlNQQ==";
-    private static Long expire = 43200000L;
+    private static final String SECRET_KEY = "aXRoZWltYQ=="; // 秘钥
+    private static final long EXPIRATION_TIME = 12 * 60 * 60 * 1000; // 12小时
 
     /**
      * 生成JWT令牌
-     * @return
+     * @param claims 令牌中包含的信息
+     * @return 生成的JWT令牌字符串
      */
-    public static String generateJwt(Map<String,Object> claims){
-        String jwt = Jwts.builder()
+    public static String generateToken(Map<String, Object> claims) {
+        return Jwts.builder()
+                .signWith(SignatureAlgorithm.HS256, SECRET_KEY)
                 .addClaims(claims)
-                .signWith(SignatureAlgorithm.HS256, signKey)
-                .setExpiration(new Date(System.currentTimeMillis() + expire))
+                .setExpiration(new Date(System.currentTimeMillis() + EXPIRATION_TIME))
                 .compact();
-        return jwt;
     }
 
     /**
      * 解析JWT令牌
-     * @param jwt JWT令牌
-     * @return JWT第二部分负载 payload 中存储的内容
+     * @param token 要解析的JWT令牌字符串
+     * @return 包含令牌信息的Claims对象
+     * @throws Exception 如果令牌无效或已过期，则抛出异常
      */
-    public static Claims parseJWT(String jwt){
-        Claims claims = Jwts.parser()
-                .setSigningKey(signKey)
-                .parseClaimsJws(jwt)
+    public static Claims parseToken(String token) throws Exception {
+        return Jwts.parser()
+                .setSigningKey(SECRET_KEY)
+                .parseClaimsJws(token)
                 .getBody();
-        return claims;
     }
 }
