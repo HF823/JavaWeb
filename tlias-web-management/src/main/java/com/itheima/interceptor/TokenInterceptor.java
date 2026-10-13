@@ -1,6 +1,6 @@
 package com.itheima.interceptor;
 
-import com.itheima.util.JwtUtils;
+import com.itheima.utils.JwtUtils;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;
